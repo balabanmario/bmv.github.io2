@@ -1,1 +1,118 @@
-Ciao Mondo
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive 2x4 Grid</title>
+    <style>
+        /* Reset some default styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+        }
+
+        /* Set up the grid container */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 columns */
+            grid-template-rows: repeat(4, 1fr); /* 4 rows */
+            gap: 10px; /* Space between grid items */
+            padding: 10px;
+            height: 100vh; /* Full height */
+            box-sizing: border-box;
+        }
+
+        /* Style for each grid item */
+        .grid-item {
+            background-color: #4CAF50; /* Green background */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* Prevent image from overflowing */
+            display: flex;
+            flex-direction: column; /* Stack the image and title vertically */
+            justify-content: center; /* Center the content (image + title) */
+            align-items: center; /* Center the content (image + title) */
+        }
+
+        /* Style the image to fit inside the div */
+        .grid-item img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain; /* Ensure image fits without distortion */
+        }
+
+        /* Style the title */
+        .grid-item .title {
+            margin-top: 10px; /* Add space between the image and title */
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        /* Make the grid responsive for smaller screens */
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr); /* Keep 2 columns on tablets and mobile */
+                grid-template-rows: repeat(4, 1fr); /* Keep 4 rows */
+            }
+
+            .grid-item {
+                font-size: 16px; /* Slightly smaller font size on smaller screens */
+                padding: 15px; /* Adjust padding for smaller screens */
+            }
+        }
+
+        /* Additional adjustments for very small screens (portrait mode or very small mobile devices) */
+        @media (max-width: 480px) {
+            .grid-item {
+                font-size: 14px; /* Smaller font size on very small screens */
+                padding: 12px; /* Adjust padding further */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="grid-container">
+    <!-- 2x4 Grid of divs -->
+    <div class="grid-item">
+        <img class="img-fluid" alt="Image 1" src="https://www4.ti.ch/fileadmin/DT/temi/webcams/wct_immagini/VCG_SUGO-S.gif">
+        <div class="title">Manno</div> <!-- Title under the image -->
+    </div>
+    <div class="grid-item">
+        <img class="img-fluid" alt="Image 2" src="https://www4.ti.ch/fileadmin/DT/temi/webcams/wct_immagini/LOG_17.1S.gif">
+        <div class="title">Item 2</div> <!-- Title under the image -->
+    </div>
+    <div class="grid-item">
+        <img class="img-fluid" alt="Image 3" src="https://www4.ti.ch/fileadmin/DT/temi/webcams/wct_immagini/VCG_SUGO-E.gif">
+        <div class="title">Manno</div> <!-- Title under the image -->
+    </div>
+    <div class="grid-item">
+        <img class="img-fluid" alt="Image 8" src="https://www4.ti.ch/fileadmin/DT/temi/webcams/wct_immagini/LOG_17.1S.gif">
+        <div class="title">Grancia</div> <!-- Title under the image -->
+    </div>
+    <div class="grid-item">
+        <img class="img-fluid" alt="Image 5" src="https://www4.ti.ch/fileadmin/DT/temi/webcams/wct_immagini/LOG_17.1S.gif">
+        <div class="title">Item 5</div> <!-- Title under the image -->
+    </div>
+    <div class="grid-item">
+        <img class="img-fluid" alt="Image 6" src="https://www4.ti.ch/fileadmin/DT/temi/webcams/wct_immagini/20.85N.gif">
+        <div class="title">Grancia </div> <!-- Title under the image -->
+    </div>
+    <div class="grid-item">
+        <img class="img-fluid" alt="Image 7" src="https://www4.ti.ch/fileadmin/DT/temi/webcams/wct_immagini/LOG_17.1S.gif">
+        <div class="title">Item 7</div> <!-- Title under the image -->
+    </div>
+    <div class="grid-item">
+        <img class="img-fluid" alt="Image 8" src="https://www4.ti.ch/fileadmin/DT/temi/webcams/wct_immagini/08.1N.gif">
+        <div class="title">Mendrisio</div> <!-- Title under the image -->
+    </div>
+</div>
+
+</body>
+</html>
